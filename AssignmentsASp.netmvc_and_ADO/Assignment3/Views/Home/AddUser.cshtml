@@ -1,0 +1,16 @@
+﻿@model WebApplication4.Models.User
+
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+@using (Html.BeginForm("SaveUser", "Home"))
+{
+    @Html.TextBoxFor(user => user.UserName)
+    @Html.PasswordFor(user => user.Password)
+
+
+    <input type="submit" value="Add User" />
+}
+
